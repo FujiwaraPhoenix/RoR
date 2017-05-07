@@ -6,7 +6,6 @@ public class Controller : MonoBehaviour {
     public int currHP, maxHP, dmg;
     public bool counterActive, attacking, dodging;
 
-
     // Use this for initialization
     void Awake()
     {
