@@ -6,8 +6,8 @@ public class Player : MonoBehaviour {
     public static Player p;
     public SpriteRenderer s;
     public Sprite[] playerOrientation= new Sprite[8];
-    public int playerDir;
-    public bool dead, swinging, countering, iframe;
+    public int playerDir, timer, dashCD;
+    public bool dead, swinging, countering, dashing, iframe;
 
     void Awake()
     {
@@ -32,6 +32,7 @@ public class Player : MonoBehaviour {
         if (!swinging && !countering)
         {
             Move();
+            Dash();
         }
         if (Input.GetKeyDown(KeyCode.J))
         {
@@ -46,7 +47,7 @@ public class Player : MonoBehaviour {
 
     void Move()
     {
-        if (!dead)
+        if (!dead && !dashing)
         {
             Vector2 moveVect = Vector2.zero;
             if (Input.GetKey(KeyCode.W)) { moveVect.y += 1; }
@@ -119,5 +120,65 @@ public class Player : MonoBehaviour {
             countering = false;
             yield return new WaitForSeconds(1);
         }
+    }
+
+    void Dash()
+    {
+        if ((Input.GetKeyDown(KeyCode.Space)) && dashCD < 1)
+        {
+            dashing = true;
+            iframe = true;
+            timer = 30;
+            dashCD = 180;
+        }
+        else if (timer > 0)
+        {
+            if (playerDir == 0)
+            {
+                //play dash UP
+                transform.position += GlobalFxns.ToVect(90).normalized * .875f;
+            }
+            if (playerDir == 1)
+            {
+                //play dash UPRT
+                transform.position += GlobalFxns.ToVect(45).normalized * .875f;
+            }
+            if (playerDir == 2)
+            {
+                //play dash RT
+                transform.position += GlobalFxns.ToVect(0).normalized * .875f;
+            }
+            if (playerDir == 3)
+            {
+                //play dash DNRT
+                transform.position += GlobalFxns.ToVect(-45).normalized * .875f;
+            }
+            if (playerDir == 4)
+            {
+                //play dash DN
+                transform.position += GlobalFxns.ToVect(-90).normalized * .875f;
+            }
+            if (playerDir == 5)
+            {
+                //play dash DNLT
+                transform.position += GlobalFxns.ToVect(-135).normalized * .875f;
+            }
+            if (playerDir == 6)
+            {
+                //play dash LT
+                transform.position += GlobalFxns.ToVect(180).normalized * .875f;
+            }
+            if (playerDir == 7)
+            {
+                //play dash UPLT
+                transform.position += GlobalFxns.ToVect(135).normalized * .875f;
+            }
+            timer--;
+        }
+        else {
+            iframe = false;
+            dashing = false;
+        }
+        dashCD--;
     }
 }
