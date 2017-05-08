@@ -12,43 +12,53 @@ public class Enemy : MonoBehaviour {
 	//ANIMATION STUFF
 	public Animator anim;
 	bool facingFront, facingRight, facingBack, facingLeft;
+	float deathTimer;
 
     // Use this for initialization
     void Start () {
-		
+		deathTimer = 1f;
 	}
 
     // Update is called once per frame
     void Update() {
-        if (active)
-        {
-            Move();
-            if ((transform.position - Player.p.transform.position).magnitude < atkRad)
-            {
-                StartCoroutine(Attack());
-            }
-            //more animation stuff
-            if (facingFront) { anim.SetBool("FacingFront", true); }
-            else { anim.SetBool("FacingFront", false); }
-            if (facingBack) { anim.SetBool("FacingBack", true); }
-            else { anim.SetBool("FacingBack", false); }
-            if (facingLeft)
-            {
-                anim.SetBool("FacingLeft", true);
-            }
-            else
-            {
-                anim.SetBool("FacingLeft", false);
-            }
-            if (facingRight)
-            {
-                anim.SetBool("FacingRight", true);
-            }
-            else
-            {
-                anim.SetBool("FacingRight", false);
-            }
-        }
+		if (active) {
+			Move ();
+			if ((transform.position - Player.p.transform.position).magnitude < atkRad) {
+				StartCoroutine (Attack ());
+			}
+			//more animation stuff
+			if (facingFront) {
+				anim.SetBool ("FacingFront", true);
+			} else {
+				anim.SetBool ("FacingFront", false);
+			}
+			if (facingBack) {
+				anim.SetBool ("FacingBack", true);
+			} else {
+				anim.SetBool ("FacingBack", false);
+			}
+			if (facingLeft) {
+				anim.SetBool ("FacingLeft", true);
+			} else {
+				anim.SetBool ("FacingLeft", false);
+			}
+			if (facingRight) {
+				anim.SetBool ("FacingRight", true);
+			} else {
+				anim.SetBool ("FacingRight", false);
+			}
+		}
+
+		if (Controller.Instance.currHP <= 0) {
+			anim.SetBool ("dead", true);
+			deathTimer -= Time.deltaTime;
+		} else {
+			anim.SetBool ("dead", false);
+		}
+
+		if (deathTimer <= 0) {
+			Destroy (gameObject);
+		}
     }
 
     IEnumerator Attack()

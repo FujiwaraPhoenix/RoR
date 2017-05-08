@@ -31,7 +31,7 @@ public class Player : MonoBehaviour {
 
     // Use this for initialization
 	void Start () {
-		deathTimer = 2.5f;
+		deathTimer = 1.4f;
         mvspd = .0625f;
 
     }
@@ -111,7 +111,13 @@ public class Player : MonoBehaviour {
         }
         if (dead)
         {
-            return;
+			deathTimer -= Time.deltaTime;
+			if (deathTimer <= 0) {
+				anim.SetBool ("stilldead", true);
+			} else {
+				anim.SetBool ("stilldead", false);
+			}
+            //return;
         }
 	}
 
@@ -333,13 +339,6 @@ public class Player : MonoBehaviour {
         {
             dead = true;
 			anim.SetBool ("dead", true);
-			deathTimer -= Time.deltaTime;
-			if (deathTimer <= 0) {
-				anim.SetBool ("dead", false);
-				anim.SetBool ("stilldead", true);
-			} else {
-				anim.SetBool ("stilldead", false);
-			}
         }
     }
 
