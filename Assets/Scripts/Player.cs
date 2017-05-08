@@ -6,14 +6,14 @@ public class Player : MonoBehaviour {
     public static Player p;
     public SpriteRenderer s;
     public Sprite[] playerOrientation= new Sprite[8];
-    public int playerDir, timer, dashCD, iframe2cd;
-    public bool dead, swinging, countering, dashing, iframe, iframe2;
+    public int playerDir, timer, dashCD, iframe2cd, itemcd, item2cd, item3cd, item4cd;
+    public bool dead, swinging, countering, dashing, iframe, iframe2, iframe3, item2used, item3used, item4used;
     public AtkBox a, b, c, d;
     public AudioClip mvt, mvt2, mvt3;
 
 	public Animator anim;
 	bool facingFront, facingRight, facingBack, facingLeft;
-	float deathTimer;
+	float deathTimer, mvspd;
 
 
     void Awake()
@@ -32,7 +32,9 @@ public class Player : MonoBehaviour {
     // Use this for initialization
 	void Start () {
 		deathTimer = 2.5f;
-	}
+        mvspd = .0625f;
+
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -86,6 +88,8 @@ public class Player : MonoBehaviour {
             {
                 anim.SetBool("FacingRight", false);
             }
+            itemUse();
+            checkDed();
         }
         else {
             if (iframe2cd > 0)
@@ -105,7 +109,10 @@ public class Player : MonoBehaviour {
                 iframe2 = false;
             }
         }
-        checkDed();
+        if (dead)
+        {
+            return;
+        }
 	}
 
     void Move()
@@ -123,7 +130,7 @@ public class Player : MonoBehaviour {
             }
 
             moveVect.Normalize();
-            transform.position += (Vector3)(moveVect * .0625f * 60f * Time.deltaTime);
+            transform.position += (Vector3)(moveVect * mvspd * 60f * Time.deltaTime);
 
             float pDir = GlobalFxns.ToAng(moveVect.normalized);
             playerDir = (int)pDir;
@@ -187,7 +194,6 @@ public class Player : MonoBehaviour {
             {
                 Sound.me.PlaySound(mvt3, .15f, 2, 3);
             }
-            Debug.Log(rando);
         }
     }
 
@@ -335,5 +341,40 @@ public class Player : MonoBehaviour {
 				anim.SetBool ("stilldead", false);
 			}
         }
+    }
+
+    void itemUse()
+    {
+        if (item2cd > 0)
+        {
+            iframe3 = true;
+        }
+        else
+        {
+            iframe3 = false;
+            item2used = false;
+        }
+        if (item3cd > 0)
+        {
+            mvspd = .125f;
+        }
+        else
+        {
+            mvspd = .0625f;
+            item3used = false;
+        }
+        if (item4cd > 0)
+        {
+            Controller.Instance.dmg = 5;
+        }
+        else
+        {
+            Controller.Instance.dmg = 1;
+            item4used = false;
+        }
+        itemcd--;
+        item2cd--;
+        item3cd--;
+        item4cd--;
     }
 }

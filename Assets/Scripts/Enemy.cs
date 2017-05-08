@@ -147,7 +147,7 @@ public class Enemy : MonoBehaviour {
 
     void HitScan()
     {
-        if (!Player.p.iframe && !Player.p.iframe2)
+        if (!Player.p.iframe && !Player.p.iframe2 && !Player.p.iframe3)
         {
             if (facingBack)
             {
