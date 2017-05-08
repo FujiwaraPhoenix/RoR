@@ -51,11 +51,12 @@ public class Sound : MonoBehaviour {
         {
             for (int i = a; i < b; i++)
             {
-                if (!audSources[i].isPlaying)
-                {
+				if (audSources[i] != null) {
+					if (!audSources [i].isPlaying) {
 
-                    return i;
-                }
+						return i;
+					}
+				}
             }
         }
         return -1;

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Player : MonoBehaviour {
     public static Player p;
@@ -15,6 +16,10 @@ public class Player : MonoBehaviour {
 	bool facingFront, facingRight, facingBack, facingLeft;
 	float deathTimer, mvspd;
 
+	public Slider HPSlider;
+	public Image fillArea;
+	public Image fillRep;
+
 
     void Awake()
     {
@@ -27,6 +32,8 @@ public class Player : MonoBehaviour {
         {
             Destroy(gameObject);
         }
+
+		fillRep.enabled = false;
     }
 
     // Use this for initialization
@@ -114,8 +121,16 @@ public class Player : MonoBehaviour {
 				anim.SetBool ("stilldead", true);
 			} else {
 				anim.SetBool ("stilldead", false);
-			}
+			} 
         }
+		HPSlider.value = Controller.Instance.currHP;
+		if (dead) {
+			fillRep.enabled = true;
+			fillArea.enabled = false;
+		} else {
+			fillRep.enabled = false;
+			fillArea.enabled = true;
+		}
 	}
 
     void Move()
@@ -313,7 +328,7 @@ public class Player : MonoBehaviour {
 
     void checkDed()
     {
-        if (Controller.Instance.currHP < 1)
+        if (Controller.Instance.currHP == 0)
         {
             dead = true;
 			anim.SetBool ("dead", true);
