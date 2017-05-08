@@ -22,6 +22,6 @@ public class Controller : MonoBehaviour {
 
     // Update is called once per frame
     void Update () {
-		
-	}
+        Sound.me.PlaySound(Sound.me.music, .25f, 1, 2);
+    }
 }

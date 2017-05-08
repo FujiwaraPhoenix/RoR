@@ -9,6 +9,7 @@ public class Player : MonoBehaviour {
     public int playerDir, timer, dashCD, iframe2cd;
     public bool dead, swinging, countering, dashing, iframe, iframe2;
     public AtkBox a, b, c, d;
+    public AudioClip mvt, mvt2, mvt3;
 
 	public Animator anim;
 	bool facingFront, facingRight, facingBack, facingLeft;
@@ -170,6 +171,20 @@ public class Player : MonoBehaviour {
             {
                 playerDir = 5;
             }
+            int rando = Random.Range(0, 3);
+            if (rando == 0)
+            {
+                Sound.me.PlaySound(mvt, .15f, 2, 3);
+            }
+            if (rando == 1)
+            {
+                Sound.me.PlaySound(mvt2, .15f, 2, 3);
+            }
+            if (rando == 2)
+            {
+                Sound.me.PlaySound(mvt3, .15f, 2, 3);
+            }
+            Debug.Log(rando);
         }
     }
 
