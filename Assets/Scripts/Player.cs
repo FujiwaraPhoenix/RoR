@@ -207,6 +207,7 @@ public class Player : MonoBehaviour {
             swinging = true;
             //Play the swing animation
 			anim.SetBool ("attacking", true);
+			anim.SetBool ("dash", false);
             HitScan();
             yield return new WaitForSeconds(.75f);
             swinging = false;
