@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class AtkBox : MonoBehaviour {
-    bool active, contact;
+    public bool active, contact;
+    public GameObject colliding;
 
 	// Use this for initialization
 	void Start () {
@@ -14,4 +15,37 @@ public class AtkBox : MonoBehaviour {
 	void Update () {
 		
 	}
+
+    void OnTriggerEnter2D(Collider2D coll)
+    {
+        if (tag == "enemyAtkBox")
+        {
+            if (active)
+            {
+                if (coll.gameObject.tag == "PlayerTag")
+                {
+                    contact = true;
+                }
+            }
+        }
+
+        if (tag == "pAtkBox")
+        {
+            if (active)
+            {
+                if (coll.gameObject.tag == "eHitbox")
+                {
+                    contact = true;
+                }
+            }
+        }
+    }
+
+    void OnTriggerExit2D(Collider2D coll)
+    {
+        if ((coll.gameObject.tag == "PlayerTag") || (coll.gameObject.tag == "eHitbox"))
+        {
+            contact = false;
+        }
+    }
 }

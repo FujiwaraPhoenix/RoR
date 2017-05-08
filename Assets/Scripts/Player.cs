@@ -6,8 +6,9 @@ public class Player : MonoBehaviour {
     public static Player p;
     public SpriteRenderer s;
     public Sprite[] playerOrientation= new Sprite[8];
-    public int playerDir, timer, dashCD;
-    public bool dead, swinging, countering, dashing, iframe;
+    public int playerDir, timer, dashCD, iframe2cd;
+    public bool dead, swinging, countering, dashing, iframe, iframe2;
+    public AtkBox a, b, c, d;
 
 	public Animator anim;
 	bool facingFront, facingRight, facingBack, facingLeft;
@@ -36,12 +37,23 @@ public class Player : MonoBehaviour {
         {
             Move();
             Dash();
+            a.active = false;
+            b.active = false;
+            c.active = false;
+            d.active = false;
         }
 		if (Input.GetKeyDown (KeyCode.J)) {
 			StartCoroutine (Attack ());
-		} else if (Input.GetKeyDown (KeyCode.K)) {
-			StartCoroutine (Counter ());
 		}
+        if (iframe2cd > 0)
+        {
+            iframe2cd--;
+        }
+        else if (iframe2cd < 1)
+        {
+            iframe2 = false;
+        }
+
         //Debug.Log(swinging);
 
 
@@ -144,6 +156,7 @@ public class Player : MonoBehaviour {
             swinging = true;
             //Play the swing animation
 			anim.SetBool ("attacking", true);
+            HitScan();
             yield return new WaitForSeconds(.75f);
             swinging = false;
 			anim.SetBool ("attacking", false);
@@ -151,7 +164,7 @@ public class Player : MonoBehaviour {
         }
     }
 
-    IEnumerator Counter()
+    /*IEnumerator Counter()
     {
         if (!countering)
         {
@@ -162,17 +175,17 @@ public class Player : MonoBehaviour {
             countering = false;
             yield return new WaitForSeconds(1);
         }
-    }
+    }*/
 
     void Dash()
     {
-        if ((Input.GetKeyDown(KeyCode.Space)) && dashCD < 1)
+        if ((Input.GetKeyDown(KeyCode.K)) && dashCD < 1)
         {
 			anim.SetBool ("dash", true);
             dashing = true;
             iframe = true;
             timer = 20;
-            dashCD = 120;
+            dashCD = 60;
         }
         else if (timer > 0)
         {
@@ -224,5 +237,45 @@ public class Player : MonoBehaviour {
 			anim.SetBool ("dash", false);
         }
         dashCD--;
+    }
+
+    void HitScan()
+    {
+        if (facingBack)
+        {
+            a.active = true;
+            if (a.contact)
+            {
+                Controller.Instance.currHP -= Controller.Instance.dmg;
+                
+            }
+        }
+        else if (facingRight)
+        {
+            b.active = true;
+            if (b.contact)
+            {
+                Controller.Instance.currHP -= Controller.Instance.dmg;
+                
+            }
+        }
+        else if (facingFront)
+        {
+            c.active = true;
+            if (c.contact)
+            {
+                Controller.Instance.currHP -= Controller.Instance.dmg;
+                
+            }
+        }
+        else if (facingLeft)
+        {
+            d.active = true;
+            if (d.contact)
+            {
+                Controller.Instance.currHP -= Controller.Instance.dmg;
+                
+            }
+        }
     }
 }

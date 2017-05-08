@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour {
     public bool attacking, active;
-    public int hp, maxhp, dmg, def, enemyDir;
+    public int hp, maxhp, dmg, enemyDir;
     public float mvspd, atkdelay, atkRad;
     public AggroRad ar;
+    public AtkBox a, b, c, d;
 
 	//ANIMATION STUFF
 	public Animator anim;
@@ -57,8 +58,7 @@ public class Enemy : MonoBehaviour {
             attacking = true;
             //Play the atk animation
 			anim.SetBool ("attacking", true);
-            yield return new WaitForSeconds(atkdelay/2);
-            //hitscan
+            HitScan();
             yield return new WaitForSeconds(atkdelay / 2);
             attacking = false;
 			anim.SetBool ("attacking", false);
@@ -143,6 +143,53 @@ public class Enemy : MonoBehaviour {
             facingBack = false;
             facingRight = false;
             enemyDir = 6;
+        }
+    }
+
+    void HitScan()
+    {
+        if (!Player.p.iframe && !Player.p.iframe2)
+        {
+            if (facingBack)
+            {
+                a.active = true;
+                if (a.contact)
+                {
+                    Controller.Instance.currHP -= dmg;
+                    Player.p.iframe2 = true;
+                    Player.p.iframe2cd = 15;
+                }
+            }
+            else if (facingRight)
+            {
+                b.active = true;
+                if (b.contact)
+                {
+                    Controller.Instance.currHP -= dmg;
+                    Player.p.iframe2 = true;
+                    Player.p.iframe2cd = 15;
+                }
+            }
+            else if (facingFront)
+            {
+                c.active = true;
+                if (c.contact)
+                {
+                    Controller.Instance.currHP -= dmg;
+                    Player.p.iframe2 = true;
+                    Player.p.iframe2cd = 15;
+                }
+            }
+            else if (facingLeft)
+            {
+                d.active = true;
+                if (d.contact)
+                {
+                    Controller.Instance.currHP -= dmg;
+                    Player.p.iframe2 = true;
+                    Player.p.iframe2cd = 15;
+                }
+            }
         }
     }
 }

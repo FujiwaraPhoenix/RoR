@@ -37,7 +37,6 @@ public class AggroRad : MonoBehaviour {
             }
             sd = true;
         }
-        Debug.Log(collision);
     }
 
 
