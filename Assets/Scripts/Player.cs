@@ -144,10 +144,10 @@ public class Player : MonoBehaviour {
             swinging = true;
             //Play the swing animation
 			anim.SetBool ("attacking", true);
-            yield return new WaitForSeconds(.5f);
+            yield return new WaitForSeconds(.75f);
             swinging = false;
 			anim.SetBool ("attacking", false);
-            yield return new WaitForSeconds(.5f);
+            //yield return new WaitForSeconds(.25f);
         }
     }
 

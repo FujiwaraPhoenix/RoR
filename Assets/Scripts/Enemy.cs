@@ -3,9 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Enemy : MonoBehaviour {
-    public bool attacking;
+    public bool attacking, active;
     public int hp, maxhp, dmg, def, enemyDir;
     public float mvspd, atkdelay, atkRad;
+    public AggroRad ar;
 
 	//ANIMATION STUFF
 	public Animator anim;
@@ -18,26 +19,35 @@ public class Enemy : MonoBehaviour {
 
     // Update is called once per frame
     void Update() {
-        Move();
-        if ((transform.position - Player.p.transform.position).magnitude < atkRad) {
-            StartCoroutine(Attack());
+        if (active)
+        {
+            Move();
+            if ((transform.position - Player.p.transform.position).magnitude < atkRad)
+            {
+                StartCoroutine(Attack());
+            }
+            //more animation stuff
+            if (facingFront) { anim.SetBool("FacingFront", true); }
+            else { anim.SetBool("FacingFront", false); }
+            if (facingBack) { anim.SetBool("FacingBack", true); }
+            else { anim.SetBool("FacingBack", false); }
+            if (facingLeft)
+            {
+                anim.SetBool("FacingLeft", true);
+            }
+            else
+            {
+                anim.SetBool("FacingLeft", false);
+            }
+            if (facingRight)
+            {
+                anim.SetBool("FacingRight", true);
+            }
+            else
+            {
+                anim.SetBool("FacingRight", false);
+            }
         }
-
-		//more animation stuff
-		if (facingFront) { anim.SetBool ("FacingFront", true); }
-		else { anim.SetBool ("FacingFront", false); }
-		if (facingBack) { anim.SetBool ("FacingBack", true); }
-		else { anim.SetBool ("FacingBack", false); }
-		if (facingLeft) {
-			anim.SetBool ("FacingLeft", true);
-		} else {
-			anim.SetBool ("FacingLeft", false);
-		}
-		if (facingRight) {
-			anim.SetBool ("FacingRight", true);
-		} else {
-			anim.SetBool ("FacingRight", false);
-		}
     }
 
     IEnumerator Attack()
@@ -126,9 +136,12 @@ public class Enemy : MonoBehaviour {
 			facingBack = false;
 			facingRight = false;
         }
-        if (angle > 157.5f && angle < -157.5f)
+        if (angle > 157.5f || angle < -157.5f)
         {
-			//not working?
+            facingLeft = true;
+            facingFront = false;
+            facingBack = false;
+            facingRight = false;
             enemyDir = 6;
         }
     }
