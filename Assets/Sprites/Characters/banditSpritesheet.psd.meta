@@ -1,0 +1,706 @@
+fileFormatVersion: 2
+guid: f45962771576cbc4b9c25fe1a0d25a45
+timeCreated: 1494175949
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: banditSpritesheet_0
+    21300002: banditSpritesheet_1
+    21300004: banditSpritesheet_2
+    21300006: banditSpritesheet_3
+    21300008: banditSpritesheet_4
+    21300010: banditSpritesheet_5
+    21300012: banditSpritesheet_6
+    21300014: banditSpritesheet_7
+    21300016: banditSpritesheet_8
+    21300018: banditSpritesheet_9
+    21300020: banditSpritesheet_10
+    21300022: banditSpritesheet_11
+    21300024: banditSpritesheet_12
+    21300026: banditSpritesheet_13
+    21300028: banditSpritesheet_14
+    21300030: banditSpritesheet_15
+    21300032: banditSpritesheet_16
+    21300034: banditSpritesheet_17
+    21300036: banditSpritesheet_18
+    21300038: banditSpritesheet_19
+    21300040: banditSpritesheet_20
+    21300042: banditSpritesheet_21
+    21300044: banditSpritesheet_22
+    21300046: banditSpritesheet_23
+    21300048: banditSpritesheet_24
+    21300050: banditSpritesheet_25
+    21300052: banditSpritesheet_26
+    21300054: banditSpritesheet_27
+    21300056: banditSpritesheet_28
+    21300058: banditSpritesheet_29
+    21300060: banditSpritesheet_30
+    21300062: banditSpritesheet_31
+    21300064: banditSpritesheet_32
+    21300066: banditSpritesheet_33
+    21300068: banditSpritesheet_34
+    21300070: banditSpritesheet_35
+    21300072: banditSpritesheet_36
+    21300074: banditSpritesheet_37
+    21300076: banditSpritesheet_38
+    21300078: banditSpritesheet_39
+    21300080: banditSpritesheet_40
+    21300082: banditSpritesheet_41
+    21300084: banditSpritesheet_42
+    21300086: banditSpritesheet_43
+    21300088: banditSpritesheet_44
+  serializedVersion: 4
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: 0
+    aniso: -1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 19
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: banditSpritesheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 216
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: banditSpritesheet_1
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 216
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: banditSpritesheet_2
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 216
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: banditSpritesheet_3
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 216
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: banditSpritesheet_4
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 216
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: banditSpritesheet_5
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 216
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: banditSpritesheet_6
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 216
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: banditSpritesheet_7
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 216
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: banditSpritesheet_8
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 216
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: banditSpritesheet_9
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 216
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: banditSpritesheet_10
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 216
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: banditSpritesheet_11
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 216
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: banditSpritesheet_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 176
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: banditSpritesheet_13
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 176
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: banditSpritesheet_14
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 176
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: banditSpritesheet_15
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 176
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: banditSpritesheet_16
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 176
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: banditSpritesheet_17
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 176
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: banditSpritesheet_18
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 176
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: banditSpritesheet_19
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 176
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: banditSpritesheet_20
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 176
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: banditSpritesheet_21
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 176
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: banditSpritesheet_22
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 176
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: banditSpritesheet_23
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 176
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: banditSpritesheet_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 136
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: banditSpritesheet_25
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 136
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: banditSpritesheet_26
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 136
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: banditSpritesheet_27
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 136
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: banditSpritesheet_28
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 136
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: banditSpritesheet_29
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 136
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: banditSpritesheet_30
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 136
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: banditSpritesheet_31
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 136
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: banditSpritesheet_32
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 136
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: banditSpritesheet_33
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 136
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: banditSpritesheet_34
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 136
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: banditSpritesheet_35
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 136
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: banditSpritesheet_36
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 96
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: banditSpritesheet_37
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 96
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: banditSpritesheet_38
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 96
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: banditSpritesheet_39
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 96
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: banditSpritesheet_40
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 96
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: banditSpritesheet_41
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 96
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: banditSpritesheet_42
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 96
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: banditSpritesheet_43
+      rect:
+        serializedVersion: 2
+        x: 280
+        y: 96
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: banditSpritesheet_44
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 96
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

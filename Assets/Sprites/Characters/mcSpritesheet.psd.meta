@@ -1,0 +1,972 @@
+fileFormatVersion: 2
+guid: 93dfa39a55b6e0045b17bfdd4954d5b9
+timeCreated: 1494185418
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: mcSpritesheet_0
+    21300002: mcSpritesheet_1
+    21300004: mcSpritesheet_2
+    21300006: mcSpritesheet_3
+    21300008: mcSpritesheet_4
+    21300010: mcSpritesheet_5
+    21300012: mcSpritesheet_6
+    21300014: mcSpritesheet_7
+    21300016: mcSpritesheet_8
+    21300018: mcSpritesheet_9
+    21300020: mcSpritesheet_10
+    21300022: mcSpritesheet_11
+    21300024: mcSpritesheet_12
+    21300026: mcSpritesheet_13
+    21300028: mcSpritesheet_14
+    21300030: mcSpritesheet_15
+    21300032: mcSpritesheet_16
+    21300034: mcSpritesheet_17
+    21300036: mcSpritesheet_18
+    21300038: mcSpritesheet_19
+    21300040: mcSpritesheet_20
+    21300042: mcSpritesheet_21
+    21300044: mcSpritesheet_22
+    21300046: mcSpritesheet_23
+    21300048: mcSpritesheet_24
+    21300050: mcSpritesheet_25
+    21300052: mcSpritesheet_26
+    21300054: mcSpritesheet_27
+    21300056: mcSpritesheet_28
+    21300058: mcSpritesheet_29
+    21300060: mcSpritesheet_30
+    21300062: mcSpritesheet_31
+    21300064: mcSpritesheet_32
+    21300066: mcSpritesheet_33
+    21300068: mcSpritesheet_34
+    21300070: mcSpritesheet_35
+    21300072: mcSpritesheet_36
+    21300074: mcSpritesheet_37
+    21300076: mcSpritesheet_38
+    21300078: mcSpritesheet_39
+    21300080: mcSpritesheet_40
+    21300082: mcSpritesheet_41
+    21300084: mcSpritesheet_42
+    21300086: mcSpritesheet_43
+    21300088: mcSpritesheet_44
+    21300090: mcSpritesheet_45
+    21300092: mcSpritesheet_46
+    21300094: mcSpritesheet_47
+    21300096: mcSpritesheet_48
+    21300098: mcSpritesheet_49
+    21300100: mcSpritesheet_50
+    21300102: mcSpritesheet_51
+    21300104: mcSpritesheet_52
+    21300106: mcSpritesheet_53
+    21300108: mcSpritesheet_54
+    21300110: mcSpritesheet_55
+    21300112: mcSpritesheet_56
+    21300114: mcSpritesheet_57
+    21300116: mcSpritesheet_58
+    21300118: mcSpritesheet_59
+    21300120: mcSpritesheet_60
+    21300122: mcSpritesheet_61
+    21300124: mcSpritesheet_62
+    21300126: mcSpritesheet_63
+  serializedVersion: 4
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: 0
+    aniso: -1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 20
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: mcSpritesheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 467
+        width: 45
+        height: 45
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: mcSpritesheet_1
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 467
+        width: 45
+        height: 45
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: mcSpritesheet_2
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 467
+        width: 45
+        height: 45
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: mcSpritesheet_3
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 467
+        width: 45
+        height: 45
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: mcSpritesheet_4
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 467
+        width: 45
+        height: 45
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: mcSpritesheet_5
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 467
+        width: 45
+        height: 45
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: mcSpritesheet_6
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 467
+        width: 45
+        height: 45
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: mcSpritesheet_7
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 467
+        width: 45
+        height: 45
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: mcSpritesheet_8
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 467
+        width: 45
+        height: 45
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: mcSpritesheet_9
+      rect:
+        serializedVersion: 2
+        x: 405
+        y: 467
+        width: 45
+        height: 45
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: mcSpritesheet_10
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 467
+        width: 45
+        height: 45
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: mcSpritesheet_11
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 422
+        width: 45
+        height: 45
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: mcSpritesheet_12
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 422
+        width: 45
+        height: 45
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: mcSpritesheet_13
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 422
+        width: 45
+        height: 45
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: mcSpritesheet_14
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 422
+        width: 45
+        height: 45
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: mcSpritesheet_15
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 422
+        width: 45
+        height: 45
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: mcSpritesheet_16
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 422
+        width: 45
+        height: 45
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: mcSpritesheet_17
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 422
+        width: 45
+        height: 45
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: mcSpritesheet_18
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 422
+        width: 45
+        height: 45
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: mcSpritesheet_19
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 422
+        width: 45
+        height: 45
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: mcSpritesheet_20
+      rect:
+        serializedVersion: 2
+        x: 405
+        y: 422
+        width: 45
+        height: 45
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: mcSpritesheet_21
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 422
+        width: 45
+        height: 45
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: mcSpritesheet_22
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 377
+        width: 45
+        height: 45
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: mcSpritesheet_23
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 377
+        width: 45
+        height: 45
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: mcSpritesheet_24
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 377
+        width: 45
+        height: 45
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: mcSpritesheet_25
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 377
+        width: 45
+        height: 45
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: mcSpritesheet_26
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 377
+        width: 45
+        height: 45
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: mcSpritesheet_27
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 377
+        width: 45
+        height: 45
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: mcSpritesheet_28
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 377
+        width: 45
+        height: 45
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: mcSpritesheet_29
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 377
+        width: 45
+        height: 45
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: mcSpritesheet_30
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 377
+        width: 45
+        height: 45
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: mcSpritesheet_31
+      rect:
+        serializedVersion: 2
+        x: 405
+        y: 377
+        width: 45
+        height: 45
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: mcSpritesheet_32
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 377
+        width: 45
+        height: 45
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: mcSpritesheet_33
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 332
+        width: 45
+        height: 45
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: mcSpritesheet_34
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 332
+        width: 45
+        height: 45
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: mcSpritesheet_35
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 332
+        width: 45
+        height: 45
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: mcSpritesheet_36
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 332
+        width: 45
+        height: 45
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: mcSpritesheet_37
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 332
+        width: 45
+        height: 45
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: mcSpritesheet_38
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 332
+        width: 45
+        height: 45
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: mcSpritesheet_39
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 332
+        width: 45
+        height: 45
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: mcSpritesheet_40
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 332
+        width: 45
+        height: 45
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: mcSpritesheet_41
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 332
+        width: 45
+        height: 45
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: mcSpritesheet_42
+      rect:
+        serializedVersion: 2
+        x: 405
+        y: 332
+        width: 45
+        height: 45
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: mcSpritesheet_43
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 332
+        width: 45
+        height: 45
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: mcSpritesheet_44
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 287
+        width: 45
+        height: 45
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: mcSpritesheet_45
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 287
+        width: 45
+        height: 45
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: mcSpritesheet_46
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 287
+        width: 45
+        height: 45
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: mcSpritesheet_47
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 287
+        width: 45
+        height: 45
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: mcSpritesheet_48
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 287
+        width: 45
+        height: 45
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: mcSpritesheet_49
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 287
+        width: 45
+        height: 45
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: mcSpritesheet_50
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 287
+        width: 45
+        height: 45
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: mcSpritesheet_51
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 287
+        width: 45
+        height: 45
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: mcSpritesheet_52
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 287
+        width: 45
+        height: 45
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: mcSpritesheet_53
+      rect:
+        serializedVersion: 2
+        x: 405
+        y: 287
+        width: 45
+        height: 45
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: mcSpritesheet_54
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 287
+        width: 45
+        height: 45
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: mcSpritesheet_55
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 242
+        width: 45
+        height: 45
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: mcSpritesheet_56
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 242
+        width: 45
+        height: 45
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: mcSpritesheet_57
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 242
+        width: 45
+        height: 45
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: mcSpritesheet_58
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 242
+        width: 45
+        height: 45
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: mcSpritesheet_59
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 242
+        width: 45
+        height: 45
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: mcSpritesheet_60
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 242
+        width: 45
+        height: 45
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: mcSpritesheet_61
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 242
+        width: 45
+        height: 45
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: mcSpritesheet_62
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 242
+        width: 45
+        height: 45
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: mcSpritesheet_63
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 242
+        width: 45
+        height: 45
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -9,6 +9,10 @@ public class Player : MonoBehaviour {
     public int playerDir, timer, dashCD;
     public bool dead, swinging, countering, dashing, iframe;
 
+	public Animator anim;
+	bool facingFront, facingRight, facingBack, facingLeft;
+
+
     void Awake()
     {
         if (p == null)
@@ -23,8 +27,7 @@ public class Player : MonoBehaviour {
     }
 
     // Use this for initialization
-    void Start () {
-		
+	void Start () {
 	}
 	
 	// Update is called once per frame
@@ -34,15 +37,35 @@ public class Player : MonoBehaviour {
             Move();
             Dash();
         }
-        if (Input.GetKeyDown(KeyCode.J))
-        {
-            StartCoroutine(Attack());
-        }
-        else if (Input.GetKeyDown(KeyCode.K))
-        {
-            StartCoroutine(Counter());
-        }
-        Debug.Log(swinging);
+		if (Input.GetKeyDown (KeyCode.J)) {
+			StartCoroutine (Attack ());
+		} else if (Input.GetKeyDown (KeyCode.K)) {
+			StartCoroutine (Counter ());
+		}
+        //Debug.Log(swinging);
+
+
+		//ANIMATION STUFF
+		if (Input.GetKey (KeyCode.W) || Input.GetKey (KeyCode.S) || Input.GetKey (KeyCode.A) || Input.GetKey (KeyCode.D)) {
+			anim.SetBool ("moving", true);
+		} else {
+			anim.SetBool ("moving", false);
+		}
+
+		if (facingFront) { anim.SetBool ("FacingFront", true); }
+		 else { anim.SetBool ("FacingFront", false); }
+		if (facingBack) { anim.SetBool ("FacingBack", true); }
+		 else { anim.SetBool ("FacingBack", false); }
+		if (facingLeft) {
+			anim.SetBool ("FacingLeft", true);
+		} else {
+			anim.SetBool ("FacingLeft", false);
+		}
+		if (facingRight) {
+			anim.SetBool ("FacingRight", true);
+		} else {
+			anim.SetBool ("FacingRight", false);
+		}
 	}
 
     void Move()
@@ -67,6 +90,10 @@ public class Player : MonoBehaviour {
             if (playerDir / 45 == 0)
             {
                 playerDir = 2;
+				facingRight = true;
+				facingBack = false;
+				facingFront = false;
+				facingLeft = false;
             }
             if (playerDir / 45 == 1)
             {
@@ -75,15 +102,22 @@ public class Player : MonoBehaviour {
             if (playerDir / 45 == 2)
             {
                 playerDir = 0;
+				facingBack = true;
+				facingRight = false;
+				facingLeft = false;
+				facingFront = false;
             }
             if (playerDir / 45 == 3)
             {
                 playerDir = 7;
             }
-            if (playerDir / 45 == 4)
-            {
-                playerDir = 6;
-            }
+			if (playerDir / 45 == 4) {
+				playerDir = 6;
+				facingLeft = true;
+				facingFront = false;
+				facingBack = false;
+				facingRight = false;
+			}
             if (playerDir / 45 == -1)
             {
                 playerDir = 3;
@@ -91,6 +125,10 @@ public class Player : MonoBehaviour {
             if (playerDir / 45 == -2)
             {
                 playerDir = 4;
+				facingFront = true;
+				facingBack = false;
+				facingLeft = false;
+				facingRight = false;
             }
             if (playerDir / 45 == -3)
             {
@@ -105,8 +143,10 @@ public class Player : MonoBehaviour {
         {
             swinging = true;
             //Play the swing animation
+			anim.SetBool ("attacking", true);
             yield return new WaitForSeconds(.5f);
             swinging = false;
+			anim.SetBool ("attacking", false);
             yield return new WaitForSeconds(.5f);
         }
     }
@@ -116,7 +156,9 @@ public class Player : MonoBehaviour {
         if (!countering)
         {
             countering = true;
+			anim.SetBool ("counter", true);
             yield return new WaitForSeconds(1);
+			anim.SetBool ("counter", false);
             countering = false;
             yield return new WaitForSeconds(1);
         }
@@ -126,6 +168,7 @@ public class Player : MonoBehaviour {
     {
         if ((Input.GetKeyDown(KeyCode.Space)) && dashCD < 1)
         {
+			anim.SetBool ("dash", true);
             dashing = true;
             iframe = true;
             timer = 30;
@@ -178,6 +221,7 @@ public class Player : MonoBehaviour {
         else {
             iframe = false;
             dashing = false;
+			anim.SetBool ("dash", false);
         }
         dashCD--;
     }

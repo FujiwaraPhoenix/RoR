@@ -7,6 +7,10 @@ public class Enemy : MonoBehaviour {
     public int hp, maxhp, dmg, def, enemyDir;
     public float mvspd, atkdelay, atkRad;
 
+	//ANIMATION STUFF
+	public Animator anim;
+	bool facingFront, facingRight, facingBack, facingLeft;
+
     // Use this for initialization
     void Start () {
 		
@@ -18,6 +22,22 @@ public class Enemy : MonoBehaviour {
         if ((transform.position - Player.p.transform.position).magnitude < atkRad) {
             StartCoroutine(Attack());
         }
+
+		//more animation stuff
+		if (facingFront) { anim.SetBool ("FacingFront", true); }
+		else { anim.SetBool ("FacingFront", false); }
+		if (facingBack) { anim.SetBool ("FacingBack", true); }
+		else { anim.SetBool ("FacingBack", false); }
+		if (facingLeft) {
+			anim.SetBool ("FacingLeft", true);
+		} else {
+			anim.SetBool ("FacingLeft", false);
+		}
+		if (facingRight) {
+			anim.SetBool ("FacingRight", true);
+		} else {
+			anim.SetBool ("FacingRight", false);
+		}
     }
 
     IEnumerator Attack()
@@ -26,10 +46,12 @@ public class Enemy : MonoBehaviour {
         {
             attacking = true;
             //Play the atk animation
+			anim.SetBool ("attacking", true);
             yield return new WaitForSeconds(atkdelay/2);
             //hitscan
             yield return new WaitForSeconds(atkdelay / 2);
             attacking = false;
+			anim.SetBool ("attacking", false);
             yield return new WaitForSeconds(atkdelay);
         }
     }
@@ -38,13 +60,15 @@ public class Enemy : MonoBehaviour {
     {
         if((transform.position - Player.p.transform.position).magnitude > atkRad)
         {
-            if (!attacking)
-            {
-                Vector3 dir = (transform.position - Player.p.transform.position).normalized;
-                float ang = GlobalFxns.ToAng(dir);
-                Orientation(ang);
-                transform.position += dir * mvspd;
-            }
+			if (!attacking) {
+				anim.SetBool ("moving", true);
+				Vector3 dir = (transform.position - Player.p.transform.position).normalized;
+				float ang = GlobalFxns.ToAng (dir);
+				Orientation (ang);
+				transform.position += dir * mvspd;
+			} else {
+				anim.SetBool ("moving", false);
+			}
         }
     }
 
@@ -54,6 +78,10 @@ public class Enemy : MonoBehaviour {
         if (angle < 22.5f && angle > -22.5f)
         {
             enemyDir = 2;
+			facingRight = true;
+			facingBack = false;
+			facingFront = false;
+			facingLeft = false;
         }
         if (angle < 67.5f && angle >= 22.5f)
         {
@@ -62,6 +90,10 @@ public class Enemy : MonoBehaviour {
         if (angle < 112.5f && angle >= 67.5f)
         {
             enemyDir = 0;
+			facingBack = true;
+			facingFront = false;
+			facingRight = false;
+			facingLeft = false;
         }
         if (angle < 157.5f && angle > 112.5f)
         {
@@ -74,6 +106,10 @@ public class Enemy : MonoBehaviour {
         if (angle > -112.5f && angle <= -67.5f)
         {
             enemyDir = 4;
+			facingFront = true;
+			facingBack = false;
+			facingLeft = false;
+			facingRight = false;
         }
         if (angle > -157.5f && angle <= -112.5f)
         {
@@ -82,6 +118,10 @@ public class Enemy : MonoBehaviour {
         if (angle > 157.5f && angle < -157.5f)
         {
             enemyDir = 6;
+			facingLeft = true;
+			facingFront = false;
+			facingBack = false;
+			facingRight = false;
         }
     }
 }
