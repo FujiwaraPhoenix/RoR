@@ -14,7 +14,7 @@ public class ItemMod : MonoBehaviour {
 	void Start () {
 		for (int i = 0; i < 4; i++)
         {
-            itemQuantity[i] = 1;
+            itemQuantity[i] = 5;
         }
 
 	}
@@ -96,38 +96,29 @@ public class ItemMod : MonoBehaviour {
                 }
                 if (currItem == 1)
                 {
-                    if (Player.p.item2cd < 0)
+                    if (Player.p.item2cd <= 0)
                     {
-                        if (Controller.Instance.currHP < Controller.Instance.maxHP)
-                        {
                             Player.p.item2used = true;
                             Player.p.item2cd = 180;
                             itemQuantity[currItem]--;
-                        }
                     }
                 }
                 if (currItem == 2)
                 {
-                    if (Player.p.item3cd < 0)
+                    if (Player.p.item3cd <= 0)
                     {
-                        if (Controller.Instance.currHP < Controller.Instance.maxHP)
-                        {
                             Player.p.item3used = true;
                             Player.p.item3cd = 300;
                             itemQuantity[currItem]--;
-                        }
                     }
                 }
                 if (currItem == 3)
                 {
-                    if (Player.p.item4cd < 0)
+                    if (Player.p.item4cd <= 0)
                     {
-                        if (Controller.Instance.currHP < Controller.Instance.maxHP)
-                        {
                             Player.p.item4used = true;
                             Player.p.item4cd = 300;
                             itemQuantity[currItem]--;
-                        }
                     }
                 }
             }

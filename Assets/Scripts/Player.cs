@@ -38,7 +38,7 @@ public class Player : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (!iframe2 && !dead)
+        if (!dead)
         {
             if (!swinging && !countering)
             {
@@ -90,13 +90,11 @@ public class Player : MonoBehaviour {
             }
             itemUse();
             checkDed();
-        }
-        else {
             if (iframe2cd > 0)
             {
                 iframe2cd--;
             }
-            if (iframe2cd  == 29)
+            if (iframe2cd == 29)
             {
                 s.color = new Color(255, 0, 0, .5f);
             }
@@ -117,7 +115,6 @@ public class Player : MonoBehaviour {
 			} else {
 				anim.SetBool ("stilldead", false);
 			}
-            //return;
         }
 	}
 
@@ -298,38 +295,18 @@ public class Player : MonoBehaviour {
         if (facingBack)
         {
             a.active = true;
-            if (a.contact)
-            {
-                a.colliding.GetComponent<Enemy>().hp -= Controller.Instance.dmg;
-                
-            }
         }
         else if (facingRight)
         {
             b.active = true;
-            if (b.contact)
-            {
-                b.colliding.GetComponent<Enemy>().hp -= Controller.Instance.dmg;
-
-            }
         }
         else if (facingFront)
         {
             c.active = true;
-            if (c.contact)
-            {
-                c.colliding.GetComponent<Enemy>().hp -= Controller.Instance.dmg;
-
-            }
         }
         else if (facingLeft)
         {
             d.active = true;
-            if (d.contact)
-            {
-                d.colliding.GetComponent<Enemy>().hp -= Controller.Instance.dmg;
-
-            }
         }
     }
 

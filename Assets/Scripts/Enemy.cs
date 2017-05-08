@@ -49,7 +49,7 @@ public class Enemy : MonoBehaviour {
 			}
 		}
 
-		if (Controller.Instance.currHP <= 0) {
+		if (hp <= 0) {
 			anim.SetBool ("dead", true);
 			deathTimer -= Time.deltaTime;
 		} else {
@@ -162,42 +162,22 @@ public class Enemy : MonoBehaviour {
             if (facingBack)
             {
                 a.active = true;
-                if (a.contact)
-                {
-                    Controller.Instance.currHP -= dmg;
-                    Player.p.iframe2 = true;
-                    Player.p.iframe2cd = 30;
-                }
+                a.dmg = 1;
             }
             else if (facingRight)
             {
                 b.active = true;
-                if (b.contact)
-                {
-                    Controller.Instance.currHP -= dmg;
-                    Player.p.iframe2 = true;
-                    Player.p.iframe2cd = 30;
-                }
+                b.dmg = 1;
             }
             else if (facingFront)
             {
                 c.active = true;
-                if (c.contact)
-                {
-                    Controller.Instance.currHP -= dmg;
-                    Player.p.iframe2 = true;
-                    Player.p.iframe2cd = 30;
-                }
+                c.dmg = 1;
             }
             else if (facingLeft)
             {
                 d.active = true;
-                if (d.contact)
-                {
-                    Controller.Instance.currHP -= dmg;
-                    Player.p.iframe2 = true;
-                    Player.p.iframe2cd = 30;
-                }
+                d.dmg = 1;
             }
         }
     }

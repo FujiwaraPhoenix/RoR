@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class AtkBox : MonoBehaviour {
     public bool active, contact;
+    public int dmg;
     public GameObject colliding;
 
 	// Use this for initialization
@@ -24,7 +25,11 @@ public class AtkBox : MonoBehaviour {
             {
                 if (coll.gameObject.tag == "PlayerTag")
                 {
+                    colliding = coll.gameObject;
                     contact = true;
+                    Controller.Instance.currHP -= dmg;
+                    Player.p.iframe2 = true;
+                    Player.p.iframe2cd = 30;
                 }
             }
         }
@@ -37,6 +42,7 @@ public class AtkBox : MonoBehaviour {
                 {
                     colliding = coll.gameObject;
                     contact = true;
+                    colliding.GetComponent<Enemy>().hp -= Controller.Instance.dmg;
                 }
             }
         }
