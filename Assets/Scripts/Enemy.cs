@@ -59,10 +59,9 @@ public class Enemy : MonoBehaviour {
             //Play the atk animation
 			anim.SetBool ("attacking", true);
             HitScan();
-            yield return new WaitForSeconds(atkdelay / 2);
+            yield return new WaitForSeconds(atkdelay);
             attacking = false;
 			anim.SetBool ("attacking", false);
-            yield return new WaitForSeconds(atkdelay);
         }
     }
 
@@ -157,7 +156,7 @@ public class Enemy : MonoBehaviour {
                 {
                     Controller.Instance.currHP -= dmg;
                     Player.p.iframe2 = true;
-                    Player.p.iframe2cd = 15;
+                    Player.p.iframe2cd = 30;
                 }
             }
             else if (facingRight)
@@ -167,7 +166,7 @@ public class Enemy : MonoBehaviour {
                 {
                     Controller.Instance.currHP -= dmg;
                     Player.p.iframe2 = true;
-                    Player.p.iframe2cd = 15;
+                    Player.p.iframe2cd = 30;
                 }
             }
             else if (facingFront)
@@ -177,7 +176,7 @@ public class Enemy : MonoBehaviour {
                 {
                     Controller.Instance.currHP -= dmg;
                     Player.p.iframe2 = true;
-                    Player.p.iframe2cd = 15;
+                    Player.p.iframe2cd = 30;
                 }
             }
             else if (facingLeft)
@@ -187,7 +186,7 @@ public class Enemy : MonoBehaviour {
                 {
                     Controller.Instance.currHP -= dmg;
                     Player.p.iframe2 = true;
-                    Player.p.iframe2cd = 15;
+                    Player.p.iframe2cd = 30;
                 }
             }
         }

@@ -16,7 +16,7 @@ public class AtkBox : MonoBehaviour {
 		
 	}
 
-    void OnTriggerEnter2D(Collider2D coll)
+    void OnTriggerStay2D(Collider2D coll)
     {
         if (tag == "enemyAtkBox")
         {
@@ -35,6 +35,7 @@ public class AtkBox : MonoBehaviour {
             {
                 if (coll.gameObject.tag == "eHitbox")
                 {
+                    colliding = coll.gameObject;
                     contact = true;
                 }
             }

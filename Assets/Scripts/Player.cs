@@ -33,51 +33,75 @@ public class Player : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (!swinging && !countering)
+        if (!iframe2)
         {
-            Move();
-            Dash();
-            a.active = false;
-            b.active = false;
-            c.active = false;
-            d.active = false;
+            if (!swinging && !countering)
+            {
+                Move();
+                Dash();
+                a.active = false;
+                b.active = false;
+                c.active = false;
+                d.active = false;
+            }
+            if (Input.GetKeyDown(KeyCode.J))
+            {
+                StartCoroutine(Attack());
+            }
+
+
+            //Debug.Log(swinging);
+
+
+            //ANIMATION STUFF
+            if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D))
+            {
+                anim.SetBool("moving", true);
+            }
+            else
+            {
+                anim.SetBool("moving", false);
+            }
+
+            if (facingFront) { anim.SetBool("FacingFront", true); }
+            else { anim.SetBool("FacingFront", false); }
+            if (facingBack) { anim.SetBool("FacingBack", true); }
+            else { anim.SetBool("FacingBack", false); }
+            if (facingLeft)
+            {
+                anim.SetBool("FacingLeft", true);
+            }
+            else
+            {
+                anim.SetBool("FacingLeft", false);
+            }
+            if (facingRight)
+            {
+                anim.SetBool("FacingRight", true);
+            }
+            else
+            {
+                anim.SetBool("FacingRight", false);
+            }
         }
-		if (Input.GetKeyDown (KeyCode.J)) {
-			StartCoroutine (Attack ());
-		}
-        if (iframe2cd > 0)
-        {
-            iframe2cd--;
+        else {
+            if (iframe2cd > 0)
+            {
+                iframe2cd--;
+            }
+            if (iframe2cd  == 29)
+            {
+                s.color = new Color(255, 0, 0, .5f);
+            }
+            if (iframe2cd == 15)
+            {
+                s.color = new Color(255, 255, 255, 1f);
+            }
+            else if (iframe2cd < 1)
+            {
+                iframe2 = false;
+            }
         }
-        else if (iframe2cd < 1)
-        {
-            iframe2 = false;
-        }
-
-        //Debug.Log(swinging);
-
-
-		//ANIMATION STUFF
-		if (Input.GetKey (KeyCode.W) || Input.GetKey (KeyCode.S) || Input.GetKey (KeyCode.A) || Input.GetKey (KeyCode.D)) {
-			anim.SetBool ("moving", true);
-		} else {
-			anim.SetBool ("moving", false);
-		}
-
-		if (facingFront) { anim.SetBool ("FacingFront", true); }
-		 else { anim.SetBool ("FacingFront", false); }
-		if (facingBack) { anim.SetBool ("FacingBack", true); }
-		 else { anim.SetBool ("FacingBack", false); }
-		if (facingLeft) {
-			anim.SetBool ("FacingLeft", true);
-		} else {
-			anim.SetBool ("FacingLeft", false);
-		}
-		if (facingRight) {
-			anim.SetBool ("FacingRight", true);
-		} else {
-			anim.SetBool ("FacingRight", false);
-		}
 	}
 
     void Move()
@@ -246,7 +270,7 @@ public class Player : MonoBehaviour {
             a.active = true;
             if (a.contact)
             {
-                Controller.Instance.currHP -= Controller.Instance.dmg;
+                a.colliding.GetComponent<Enemy>().hp -= Controller.Instance.dmg;
                 
             }
         }
@@ -255,8 +279,8 @@ public class Player : MonoBehaviour {
             b.active = true;
             if (b.contact)
             {
-                Controller.Instance.currHP -= Controller.Instance.dmg;
-                
+                b.colliding.GetComponent<Enemy>().hp -= Controller.Instance.dmg;
+
             }
         }
         else if (facingFront)
@@ -264,8 +288,8 @@ public class Player : MonoBehaviour {
             c.active = true;
             if (c.contact)
             {
-                Controller.Instance.currHP -= Controller.Instance.dmg;
-                
+                c.colliding.GetComponent<Enemy>().hp -= Controller.Instance.dmg;
+
             }
         }
         else if (facingLeft)
@@ -273,8 +297,8 @@ public class Player : MonoBehaviour {
             d.active = true;
             if (d.contact)
             {
-                Controller.Instance.currHP -= Controller.Instance.dmg;
-                
+                d.colliding.GetComponent<Enemy>().hp -= Controller.Instance.dmg;
+
             }
         }
     }
