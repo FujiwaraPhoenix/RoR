@@ -66,7 +66,7 @@ public class Enemy : MonoBehaviour {
 				float ang = GlobalFxns.ToAng (dir);
 				Orientation (ang);
 				transform.position += dir * mvspd;
-                Debug.Log(dir);
+                //Debug.Log(dir);
             }
             else {
 				anim.SetBool ("moving", false);
@@ -101,6 +101,10 @@ public class Enemy : MonoBehaviour {
         if (angle < 157.5f && angle > 112.5f)
         {
             enemyDir = 7;
+			facingLeft = true;
+			facingFront = false;
+			facingBack = false;
+			facingRight = false;
         }
         if (angle > -67.5f && angle <= -22.5f)
         {
@@ -117,14 +121,15 @@ public class Enemy : MonoBehaviour {
         if (angle > -157.5f && angle <= -112.5f)
         {
             enemyDir = 5;
-        }
-        if (angle > 157.5f && angle < -157.5f)
-        {
-            enemyDir = 6;
 			facingLeft = true;
 			facingFront = false;
 			facingBack = false;
 			facingRight = false;
+        }
+        if (angle > 157.5f && angle < -157.5f)
+        {
+			//not working?
+            enemyDir = 6;
         }
     }
 }
