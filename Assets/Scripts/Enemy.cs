@@ -57,6 +57,7 @@ public class Enemy : MonoBehaviour {
 		}
 
 		if (deathTimer <= 0) {
+            Item lol = Instantiate(Controller.Instance.items, transform.position, Quaternion.identity);
 			Destroy (gameObject);
 		}
     }

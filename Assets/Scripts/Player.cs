@@ -236,7 +236,7 @@ public class Player : MonoBehaviour {
 			anim.SetBool ("dash", true);
             dashing = true;
             iframe = true;
-            timer = 20;
+            timer = 10;
             dashCD = 60;
         }
         else if (timer > 0)
@@ -244,42 +244,42 @@ public class Player : MonoBehaviour {
             if (playerDir == 0)
             {
                 //play dash UP
-                transform.position += GlobalFxns.ToVect(90).normalized * .1f;
+                transform.position += GlobalFxns.ToVect(90).normalized * .2f;
             }
             if (playerDir == 1)
             {
                 //play dash UPRT
-                transform.position += GlobalFxns.ToVect(45).normalized * .1f;
+                transform.position += GlobalFxns.ToVect(45).normalized * .2f;
             }
             if (playerDir == 2)
             {
                 //play dash RT
-                transform.position += GlobalFxns.ToVect(0).normalized * .1f;
+                transform.position += GlobalFxns.ToVect(0).normalized * .2f;
             }
             if (playerDir == 3)
             {
                 //play dash DNRT
-                transform.position += GlobalFxns.ToVect(-45).normalized * .1f;
+                transform.position += GlobalFxns.ToVect(-45).normalized * .2f;
             }
             if (playerDir == 4)
             {
                 //play dash DN
-                transform.position += GlobalFxns.ToVect(-90).normalized * .1f;
+                transform.position += GlobalFxns.ToVect(-90).normalized * .2f;
             }
             if (playerDir == 5)
             {
                 //play dash DNLT
-                transform.position += GlobalFxns.ToVect(-135).normalized * .1f;
+                transform.position += GlobalFxns.ToVect(-135).normalized * .2f;
             }
             if (playerDir == 6)
             {
                 //play dash LT
-                transform.position += GlobalFxns.ToVect(180).normalized * .1f;
+                transform.position += GlobalFxns.ToVect(180).normalized * .2f;
             }
             if (playerDir == 7)
             {
                 //play dash UPLT
-                transform.position += GlobalFxns.ToVect(135).normalized * .1f;
+                transform.position += GlobalFxns.ToVect(135).normalized * .2f;
             }
             timer--;
         }

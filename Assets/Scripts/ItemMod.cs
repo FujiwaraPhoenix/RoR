@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class ItemMod : MonoBehaviour {
+    public static ItemMod imod;
     public Sprite i1, i2, i3, i4;
     public int currItem;
     public int[] itemQuantity= new int[4];
@@ -18,9 +19,23 @@ public class ItemMod : MonoBehaviour {
         }
 
 	}
-	
-	// Update is called once per frame
-	void Update () {
+
+    void Awake()
+    {
+        if (imod == null)
+        {
+            DontDestroyOnLoad(gameObject);
+            imod = this;
+        }
+        else if (imod != this)
+        {
+            Destroy(gameObject);
+        }
+    }
+
+
+    // Update is called once per frame
+    void Update () {
         itemCycle();
         Display();
         consumeItem();

@@ -5,6 +5,7 @@ public class Controller : MonoBehaviour {
     public static Controller Instance;
     public int currHP, maxHP, dmg;
     public bool counterActive, attacking, dodging;
+    public Item items;
 
     // Use this for initialization
     void Awake()
