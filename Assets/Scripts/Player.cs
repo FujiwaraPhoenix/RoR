@@ -34,7 +34,7 @@ public class Player : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (!iframe2)
+        if (!iframe2 && !dead)
         {
             if (!swinging && !countering)
             {
@@ -103,6 +103,7 @@ public class Player : MonoBehaviour {
                 iframe2 = false;
             }
         }
+        checkDed();
 	}
 
     void Move()
@@ -315,6 +316,14 @@ public class Player : MonoBehaviour {
                 d.colliding.GetComponent<Enemy>().hp -= Controller.Instance.dmg;
 
             }
+        }
+    }
+
+    void checkDed()
+    {
+        if (Controller.Instance.currHP < 1)
+        {
+            dead = true;
         }
     }
 }
