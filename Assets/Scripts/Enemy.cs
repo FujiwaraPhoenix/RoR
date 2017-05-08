@@ -58,18 +58,21 @@ public class Enemy : MonoBehaviour {
 
     void Move()
     {
-        if((transform.position - Player.p.transform.position).magnitude > atkRad)
+        if ((transform.position - Player.p.transform.position).magnitude > atkRad)
         {
 			if (!attacking) {
 				anim.SetBool ("moving", true);
-				Vector3 dir = (transform.position - Player.p.transform.position).normalized;
+				Vector3 dir = (Player.p.transform.position - transform.position).normalized;
 				float ang = GlobalFxns.ToAng (dir);
 				Orientation (ang);
 				transform.position += dir * mvspd;
-			} else {
+                Debug.Log(dir);
+            }
+            else {
 				anim.SetBool ("moving", false);
 			}
         }
+        
     }
 
     //tl;dr Orientation sets up the way the enemy is looking and therefore where it can attack.
