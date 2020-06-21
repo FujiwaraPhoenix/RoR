@@ -40,7 +40,6 @@ public class Player : MonoBehaviour {
 	void Start () {
 		deathTimer = 1.4f;
         mvspd = .0625f;
-
     }
 	
 	// Update is called once per frame
@@ -60,8 +59,6 @@ public class Player : MonoBehaviour {
             {
                 StartCoroutine(Attack());
             }
-
-
             //Debug.Log(swinging);
 
 
@@ -200,17 +197,17 @@ public class Player : MonoBehaviour {
                 playerDir = 5;
             }
             int rando = Random.Range(0, 3);
-            if (rando == 0)
+            switch (rando)
             {
-                Sound.me.PlaySound(mvt, .15f, 2, 3);
-            }
-            if (rando == 1)
-            {
-                Sound.me.PlaySound(mvt2, .15f, 2, 3);
-            }
-            if (rando == 2)
-            {
-                Sound.me.PlaySound(mvt3, .15f, 2, 3);
+                case 0:
+                    Sound.me.PlaySound(mvt, .15f, 2, 3);
+                    break;
+                case 1:
+                    Sound.me.PlaySound(mvt2, .15f, 2, 3);
+                    break;
+                case 2:
+                    Sound.me.PlaySound(mvt3, .15f, 2, 3);
+                    break;
             }
         }
     }
@@ -251,7 +248,7 @@ public class Player : MonoBehaviour {
 			anim.SetBool ("dash", true);
             dashing = true;
             iframe = true;
-            timer = 10;
+            timer = 15;
             dashCD = 60;
         }
         else if (timer > 0)
@@ -303,7 +300,10 @@ public class Player : MonoBehaviour {
             dashing = false;
 			anim.SetBool ("dash", false);
         }
-        dashCD--;
+        if (dashCD > 0)
+        {
+            dashCD--;
+        }
     }
 
     void HitScan()
@@ -364,9 +364,21 @@ public class Player : MonoBehaviour {
             Controller.Instance.dmg = 1;
             item4used = false;
         }
-        itemcd--;
-        item2cd--;
-        item3cd--;
-        item4cd--;
+        if (itemcd > 0)
+        {
+            itemcd--;
+        }
+        if (item2cd > 0)
+        {
+            item2cd--;
+        }
+        if (item3cd > 0)
+        {
+            item3cd--;
+        }
+        if (item4cd > 0)
+        {
+            item4cd--;
+        }
     }
 }

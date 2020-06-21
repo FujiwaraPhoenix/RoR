@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Enemy : MonoBehaviour {
-    public bool attacking, active;
-    public int hp, maxhp, dmg, enemyDir;
-    public float mvspd, atkdelay, atkRad;
+    public bool attacking, active, iframe;
+    public int hp, maxhp, dmg, enemyDir, invTimer;
+    public float mvspd, atkdelay, atkRad, atkcd;
     public AggroRad ar;
     public AtkBox a, b, c, d;
 
@@ -22,9 +22,9 @@ public class Enemy : MonoBehaviour {
     // Update is called once per frame
     void Update() {
 		if (active) {
-			Move ();
-			if ((transform.position - Player.p.transform.position).magnitude < atkRad) {
-				StartCoroutine (Attack ());
+			Move();
+			if ((transform.position - Player.p.transform.position).magnitude < atkRad && !attacking && atkcd <= 0) {
+				StartCoroutine (Attack());
 			}
 			//more animation stuff
 			if (facingFront) {
@@ -60,20 +60,27 @@ public class Enemy : MonoBehaviour {
             Item lol = Instantiate(Controller.Instance.items, transform.position, Quaternion.identity);
 			Destroy (gameObject);
 		}
+        if (iframe && invTimer <= 0)
+        {
+            iframe = false;
+        }
+        invTimer--;
+        atkcd--;
     }
 
     IEnumerator Attack()
     {
-        if (!attacking)
-        {
-            attacking = true;
-            //Play the atk animation
-			anim.SetBool ("attacking", true);
-            HitScan();
-            yield return new WaitForSeconds(atkdelay);
-            attacking = false;
-			anim.SetBool ("attacking", false);
-        }
+        Vector3 dir = (Player.p.transform.position - transform.position).normalized;
+        float ang = GlobalFxns.ToAng(dir);
+        Orientation(ang);
+        attacking = true;
+        //Play the atk animation
+        anim.SetBool("attacking", true);
+        HitScan();
+        atkcd = 120;
+        yield return new WaitForSeconds(atkdelay);
+        attacking = false;
+        anim.SetBool("attacking", false);
     }
 
     void Move()

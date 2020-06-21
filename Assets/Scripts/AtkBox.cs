@@ -27,13 +27,16 @@ public class AtkBox : MonoBehaviour {
                 {
                     colliding = coll.gameObject;
                     contact = true;
-                    Controller.Instance.currHP -= dmg;
-                    Player.p.iframe2 = true;
-                    Player.p.iframe2cd = 30;
+
+                    if (!Player.p.iframe && !Player.p.iframe2 && !Player.p.iframe3)
+                    {
+                        Controller.Instance.currHP -= dmg;
+                        Player.p.iframe2 = true;
+                        Player.p.iframe2cd = 30;
+                    }
                 }
             }
         }
-
         if (tag == "pAtkBox")
         {
             if (active)
@@ -42,7 +45,12 @@ public class AtkBox : MonoBehaviour {
                 {
                     colliding = coll.gameObject;
                     contact = true;
-                    colliding.GetComponent<Enemy>().hp -= Controller.Instance.dmg;
+                    if (!colliding.GetComponent<Enemy>().iframe)
+                    {
+                        colliding.GetComponent<Enemy>().iframe = true;
+                        colliding.GetComponent<Enemy>().invTimer = 15;
+                        colliding.GetComponent<Enemy>().hp -= Controller.Instance.dmg;
+                    }
                 }
             }
         }

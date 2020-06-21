@@ -14,6 +14,7 @@ public class Sound : MonoBehaviour {
         for (int i = 0; i < audSources.Length; i++)
         {
             audSources[i] = (Instantiate(audSource, new Vector3(20,20,0), Quaternion.identity) as GameObject).GetComponent<AudioSource>();
+            audSources[i].transform.parent = this.transform;
         }
     }
 
@@ -70,6 +71,7 @@ public class Sound : MonoBehaviour {
             if (audSources[i] == null)
             {
                 audSources[i] = (Instantiate(audSource, new Vector3(20, 20, 0), Quaternion.identity) as GameObject).GetComponent<AudioSource>();
+                audSources[i].transform.parent = this.transform;
             }
         }
 	}

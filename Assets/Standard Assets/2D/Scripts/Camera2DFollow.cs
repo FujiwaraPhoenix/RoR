@@ -5,6 +5,7 @@ namespace UnityStandardAssets._2D
 {
     public class Camera2DFollow : MonoBehaviour
     {
+        public Camera2DFollow c;
         public Transform target;
         public float damping = 1;
         public float lookAheadFactor = 3;
@@ -15,6 +16,20 @@ namespace UnityStandardAssets._2D
         private Vector3 m_LastTargetPosition;
         private Vector3 m_CurrentVelocity;
         private Vector3 m_LookAheadPos;
+
+        private void Awake()
+        {
+            if (c == null)
+            {
+                DontDestroyOnLoad(gameObject);
+                c = this;
+            }
+            else if (c != this)
+            {
+                Destroy(gameObject);
+            }
+
+        }
 
         // Use this for initialization
         private void Start()
