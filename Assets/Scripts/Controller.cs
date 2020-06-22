@@ -26,6 +26,10 @@ public class Controller : MonoBehaviour {
     void Update () {
         Sound.me.PlaySound(Sound.me.music, .25f, 1, 2);
         ResetScene();
+        if (Input.GetKey(KeyCode.Escape))
+        {
+            Application.Quit();
+        }
     }
 
     private void ResetScene()
