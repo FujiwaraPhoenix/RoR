@@ -64,8 +64,14 @@ public class Enemy : MonoBehaviour {
         {
             iframe = false;
         }
-        invTimer--;
-        atkcd--;
+        if (invTimer > 0)
+        {
+            invTimer--;
+        }
+        if (atkcd > 0)
+        {
+            atkcd--;
+        }
     }
 
     IEnumerator Attack()
